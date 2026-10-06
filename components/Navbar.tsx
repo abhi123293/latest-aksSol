@@ -6,6 +6,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { Montserrat } from "next/font/google";
+import { useState } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,6 +14,7 @@ const montserrat = Montserrat({
 });
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
     
@@ -151,26 +153,87 @@ export default function Navbar() {
             </button>
 
           </div>
+          
 
           {/* Mobile Menu Button */}
     
 <div className="flex items-center gap-3 lg:hidden">
-
-  {/* Brand Guide */}
   <button className="rounded-md border border-[#dcb735] px-3 py-2 text-[9px] font-bold text-[#dcb735]">
     BRAND GUIDE
   </button>
 
-  {/* Hamburger */}
-  <button className="p-1">
+  <button
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+    className="p-1"
+    aria-label="Toggle menu"
+  >
     <span className="block h-[2px] w-5 bg-[#111111]" />
     <span className="my-1.5 block h-[2px] w-5 bg-[#111111]" />
     <span className="block h-[2px] w-5 bg-[#111111]" />
   </button>
-
 </div>
 
         </div>
+         {isMenuOpen && (
+    <div className="h-[390px] border-t border-gray-200 bg-white px-10 py-7 lg:hidden">
+      <div className="flex flex-col gap-7 text-[14px] font-semibold">
+
+        <a
+          href="#"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-[#5fba28]"
+        >
+          HOME
+        </a>
+
+        <a
+          href="#about"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-[#404040] hover:text-[#5fba28]"
+        >
+          ABOUT US
+        </a>
+
+        <a
+          href="#services"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-[#404040] hover:text-[#5fba28]"
+        >
+          SERVICES
+        </a>
+
+        <a
+          href="#gallery"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-[#404040] hover:text-[#5fba28]"
+        >
+          GALLERY
+        </a>
+
+        <a
+          href="#testimonials"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-[#404040] hover:text-[#5fba28]"
+        >
+          TESTIMONIALS
+        </a>
+
+        <a
+          href="#contact"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-[#404040] hover:text-[#5fba28]"
+        >
+          CONTACT US
+        </a>
+
+        <button className="mx-auto w-[350px] rounded-md -ml-5 bg-[#5fba28] px-4 py-3 text-[13px] font-bold text-white">
+  GET FREE QUOTE
+</button>
+
+      </div>
+    </div>
+  )}
+        
       </nav>
       </>
 
