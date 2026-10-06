@@ -55,152 +55,52 @@ const serviceAreas = [
 export default function ServiceAreas() {
   return (
     <section
-      className="
-        bg-[#111111]
-        px-5
-        py-20
-        font-[var(--font-montserrat)]
-        sm:px-8
-        lg:px-12
-        xl:px-20
-      "
+     className="bg-[#111111] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20"
     >
       {/* ================= HEADING ================= */}
       <div className="mx-auto max-w-[1200px] text-center">
 
         {/* Small Heading */}
-        <p
-          className="
-            text-[14px]
-            font-bold
-            uppercase
-            tracking-wide
-            text-[#5fba28]
-          "
-        >
+       <p className="text-[14px] font-bold uppercase tracking-wide text-[#5fba28]">
           COVERAGE
         </p>
-
         {/* Main Heading */}
-        <h2
-          className="
-            mt-3
-            text-3xl
-            font-black
-            uppercase
-            leading-tight
-            tracking-tight
-            text-white
-            sm:text-4xl
-            lg:text-[52px]
-          "
-        >
+        <h2 className="mt-3 text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-[52px]">
           SERVICE AREAS IN BAHRAIN
         </h2>
 
         {/* Gold Underline */}
         <div
-          className="
-            mx-auto
-            mt-5
-            h-[5px]
-            w-[98px]
-            rounded-full
-            bg-[#dcb735]
-          "
-        />
+          className="mx-auto mt-5 h-[5px] w-[98px] rounded-full bg-[#dcb735]"/>
 
         {/* Description */}
         <p
-          className="
-            mx-auto
-            mt-6
-            max-w-[700px]
-            text-[14px]
-            leading-6
-            text-[#91a4ba]
-            sm:text-[16px]
-          "
-        >
+          className="mx-auto mt-6 max-w-[700px] text-[14px] leading-6 text-[#91a4ba]sm:text-[16px]">
           We provide prompt marble and stone care services across all
           governorates of the Kingdom of Bahrain.
         </p>
       </div>
 
       {/* ================= GOVERNORATE CARDS ================= */}
-      <div
-        className="
-          mx-auto
-          mt-20
-          grid
-          max-w-[1320px]
-          grid-cols-1
-          gap-8
-          sm:grid-cols-2
-          lg:grid-cols-4
-        "
-      >
+    <div className="mx-auto mt-20 grid max-w-[1320px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {serviceAreas.map((area) => (
-          <div
-            key={area.title}
-            className="
-              group
-              rounded-xl
-              border
-              border-[#292929]
-              bg-[#191919]
-              px-10
-              py-9
-              transition-all
-              duration-500
-              ease-out
-              hover:-translate-y-2
-              hover:border-[#5fba28]
-              hover:shadow-[0_15px_40px_rgba(0,0,0,0.35)]
-            "
-          >
+          <div key={area.title} className="group rounded-xl border border-[#292929] bg-[#191919] px-10 py-9 transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#5fba28] hover:shadow-[0_15px_40px_rgba(0,0,0,0.35)]">
             {/* Card Header */}
             <div className="flex items-start gap-4">
 
               {/* Location Icon */}
               <div
-                className="
-                  flex
-                  h-[45px]
-                  w-[45px]
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-md
-                  bg-[#202d1b]
-                  transition-all
-                  duration-300
-                  group-hover:bg-[#5fba28]
-                "
+              className="flex h-[45px] w-[45px] shrink-0 items-center justify-center rounded-md bg-[#202d1b] transition-all duration-300 group-hover:bg-[#5fba28]"
               >
                 <MapPin
                   size={25}
                   strokeWidth={2}
-                  className="
-                    text-[#5fba28]
-                    transition-colors
-                    duration-300
-                    group-hover:text-white
-                  "
+                 className="text-[#5fba28] transition-colors duration-300 group-hover:text-white"
                 />
               </div>
 
               {/* Governorate Name */}
-              <h3
-                className="
-                  pt-[-1px]
-                  text-[18px]
-                  font-black
-                  uppercase
-                  leading-7
-                  text-white
-                "
-              >
+              <h3 className="pt-[-1px] text-[18px] font-black uppercase leading-7 text-white">
                 {area.title}
               </h3>
             </div>
@@ -217,22 +117,9 @@ export default function ServiceAreas() {
                 >
                   {/* Gold Bullet */}
                   <span
-                    className="
-                      h-[7px]
-                      w-[7px]
-                      shrink-0
-                      rounded-full
-                      bg-[#dcb735]
-                    "
-                  />
+                    className="h-[7px] w-[7px] shrink-0 rounded-full bg-[#dcb735]"/>
 
-                  <span
-                    className="
-                      text-[14px]
-                      leading-5
-                      text-[#91a4ba]
-                    "
-                  >
+                <span className="text-[14px] leading-5 text-[#91a4ba]">
                     {location}
                   </span>
                 </div>
@@ -243,42 +130,12 @@ export default function ServiceAreas() {
       </div>
 
       {/* ================= UTILITY CARD ================= */}
-      <div
-        className="
-          mx-auto
-          mt-20
-          flex
-          max-w-[1080px]
-          flex-col
-          gap-7
-          rounded-xl
-          border
-          border-[#292929]
-          bg-[#191919]
-          px-8
-          py-8
-          sm:flex-row
-          sm:items-center
-          sm:justify-between
-          sm:px-10
-        "
-      >
+     <div className="mx-auto mt-20 flex max-w-[1080px] flex-col gap-7 rounded-xl border border-[#292929] bg-[#191919] px-8 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
         {/* Left Side */}
         <div className="flex items-center gap-5">
 
           {/* Shield Icon */}
-          <div
-            className="
-              flex
-              h-[58px]
-              w-[58px]
-              shrink-0
-              items-center
-              justify-center
-              rounded-full
-              bg-[#202d1b]
-            "
-          >
+          <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-[#202d1b]">
             <ShieldCheck
               size={30}
               strokeWidth={1.8}
@@ -288,27 +145,11 @@ export default function ServiceAreas() {
 
           {/* Text */}
           <div>
-            <h3
-              className="
-                text-[16px]
-                font-black
-                uppercase
-                text-white
-                sm:text-[17px]
-              "
-            >
+           <h3 className="text-[16px] font-black uppercase text-white sm:text-[17px]">
               FULLY EQUIPPED UTILITY VEHICLES
             </h3>
 
-            <p
-              className="
-                mt-2
-                max-w-[700px]
-                text-[13px]
-                leading-6
-                text-[#91a4ba]
-              "
-            >
+           <p className="mt-2 max-w-[700px] text-[13px] leading-6 text-[#91a4ba]">
               Our technicians travel with all standard machinery,
               sealers, and testing kits. We ensure zero delay on-site.
             </p>
@@ -316,28 +157,7 @@ export default function ServiceAreas() {
         </div>
 
         {/* Button */}
-        <button
-          className="
-            flex
-            h-[62px]
-            min-w-[215px]
-            items-center
-            justify-center
-            rounded-md
-            bg-[#5fba28]
-            px-8
-            text-[15px]
-            font-black
-            uppercase
-            leading-tight
-            text-white
-            shadow-lg
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:bg-[#4da51c]
-          "
-        >
+     <button className="flex h-[62px] min-w-[215px] items-center justify-center rounded-md bg-[#5fba28] px-8 text-[15px] font-black uppercase leading-tight text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c]">
           CHECK
           <br />
           AVAILABILITY
