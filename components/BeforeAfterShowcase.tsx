@@ -31,25 +31,32 @@ function BeforeAfterCard({
 }) {
   const [position, setPosition] = useState(50);
 
-  const handleMouseMove = (
-    e: React.MouseEvent<HTMLDivElement>
-  ) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+ const handlePointerMove = (
+  e: React.PointerEvent<HTMLDivElement>
+) => {
+  const rect = e.currentTarget.getBoundingClientRect();
 
-    const x = e.clientX - rect.left;
+  const x = e.clientX - rect.left;
 
-    const percentage = Math.max(
-      0,
-      Math.min(100, (x / rect.width) * 100)
-    );
+  const percentage = Math.max(
+    0,
+    Math.min(100, (x / rect.width) * 100)
+  );
 
-    setPosition(percentage);
-  };
+  setPosition(percentage);
+};
 
   return (
     <div className="group">
       {/* IMAGE CARD */}
-     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-[#292929] bg-[#191919]" onMouseMove={handleMouseMove}>
+     <div
+  className="relative aspect-[16/10] w-full touch-pan-y overflow-hidden rounded-xl border border-[#292929] bg-[#191919]"
+  onPointerDown={(e) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    handlePointerMove(e);
+  }}
+  onPointerMove={handlePointerMove}
+>
         {/* SINGLE IMAGE */}
         <img
           src={image}
