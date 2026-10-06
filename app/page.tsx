@@ -7,22 +7,22 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import RestorationProcess from "@/components/RestorationProcess";
 import Portfolio from "@/components/Portfolio";
+import Testimonials from "@/components/Testimonials";
+import ServiceAreas from "@/components/ServiceAreas";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#111111]">
-
       <Navbar />
-
       <Hero />
-
       <FeatureStrip />
-
       <FloatingActions />
        <Services />
- <WhyChooseUs />
- <BeforeAfterShowcase />
- <RestorationProcess />
- <Portfolio />
+      <WhyChooseUs />
+      <BeforeAfterShowcase />
+      <RestorationProcess />
+      <Portfolio />
+      <Testimonials />
+      <ServiceAreas />
     </main>
   );
 }
