@@ -22,11 +22,11 @@ export default function UtilityVehicleBanner() {
       </div>
 
       {/* CTA Button */}
-      <button className="flex h-[56px] w-[192px] shrink-0 items-center justify-center rounded-[5px] bg-[#55B52A] text-white font-bold text-[14px] leading-[1.2] whitespace-pre-line transition-colors hover:bg-[#4a9e24]">
+      <a href="#contact-heading" className="flex h-[56px] w-[192px] shrink-0 items-center justify-center rounded-[5px] bg-[#55B52A] text-white font-bold text-[14px] leading-[1.2] whitespace-pre-line transition-colors hover:bg-[#4a9e24]">
         CHECK
         <br />
         AVAILABILITY
-      </button>
+      </a>
     </section>
   );
 }

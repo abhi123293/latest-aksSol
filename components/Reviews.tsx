@@ -140,7 +140,7 @@ export default function Reviews() {
       className="bg-[#FAFAFA] px-5 pt-[100px] pb-[110px] sm:px-8 lg:px-12 xl:px-20"
       aria-labelledby="reviews-heading"
     >
-      <div className="mx-auto max-w-[1140px]">
+      <div className="mx-auto max-w-[980px]">
         {/* Section Label & Heading */}
         <div className="text-center">
           {/* Black line above REVIEWS label */}
@@ -169,8 +169,8 @@ export default function Reviews() {
         </div>
 
         {/* Review Cards Grid */}
-        <div
-          className="mx-auto grid max-w-[1140px] grid-cols-1 gap-[28px] md:grid-cols-2 lg:grid-cols-3"
+<div
+          className="mx-auto grid max-w-[980px] grid-cols-1 gap-[28px] md:grid-cols-2 lg:grid-cols-3"
           role="list"
           aria-label="Client reviews"
         >

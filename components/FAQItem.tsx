@@ -32,7 +32,7 @@ export default function FAQItem({ question, answer, isLast }: FAQItemProps) {
       </button>
 
       <div className="overflow-hidden transition-all duration-300 ease-out" style={{ maxHeight: isOpen ? '500px' : '0', opacity: isOpen ? 1 : 0, marginTop: isOpen ? '16px' : '0', marginBottom: isOpen ? '22px' : '0' }}>
-        <p className="text-[#63758A] font-normal text-[14px] leading-[1.65]">
+        <p className="text-[#7A8AA0] font-normal text-[15px] leading-[1.7]">
           {answer}
         </p>
       </div>
