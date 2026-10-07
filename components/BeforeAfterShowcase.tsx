@@ -106,7 +106,7 @@ function BeforeAfterCard({
 
 export default function BeforeAfterShowcase() {
   return (
-  <section className="bg-[#1b1b1b] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
+  <section id="gallery" className="bg-[#1b1b1b] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
       {/* HEADING */}
       <div className="mx-auto max-w-[1300px] text-center">
 

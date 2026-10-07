@@ -65,9 +65,9 @@ export default function ServiceAreas() {
           COVERAGE
         </p>
         {/* Main Heading */}
-        <h2 className="mt-3 text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-3xl lg:text-[48px]">
-          SERVICE AREAS IN BAHRAIN
-        </h2>
+        <h2 className="mx-auto mt-3 w-[350px] text-[24px] font-black uppercase leading-tight tracking-tight text-white sm:text-3xl lg:text-[48px] lg:w-[800px]">
+  SERVICE AREAS IN BAHRAIN
+</h2>
 
         {/* Gold Underline */}
         <div

@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
     };
   }, []);
   return (
-   <section className="bg-[#111111] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
+   <section  id="about" className="bg-[#111111] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
       {/* Section Heading */}
       <div className="mx-auto max-w-[1200px] text-center">
 

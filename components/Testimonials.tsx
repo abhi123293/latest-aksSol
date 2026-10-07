@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-   <section className="bg-[#f8f8f8] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
+   <section id="testimonials" className="bg-[#f8f8f8] px-5 py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
       {/* ================= HEADING ================= */}
       <div className="mx-auto max-w-[1200px] text-center">
 
