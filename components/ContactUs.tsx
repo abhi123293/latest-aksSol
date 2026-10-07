@@ -143,7 +143,7 @@ export default function ContactUs() {
             {/* Main Heading */}
             <h2
               ref={headingRef}
-              className="mt-[8px] text-[52px] font-extrabold uppercase leading-[0.98] tracking-[-0.5px] text-[#14243A] lg:text-[52px]"
+              className="mt-[8px] text-[42px] font-extrabold uppercase leading-[1.1] tracking-[-0.5px] text-[#14243A] lg:text-[44px]"
             >
               REQUEST A FREE SITE
               <br />
@@ -158,7 +158,7 @@ export default function ContactUs() {
             />
 
             {/* Description */}
-            <p className="max-w-[610px] text-[#566273] font-normal text-[16px] leading-[1.55] lg:text-[17px]">
+            <p className="max-w-[610px] text-[#566273] font-normal text-[15px] leading-[1.55] lg:text-[15px]">
               Contact us today for professional marble floor polishing, granite honing, and stone sealing services in Bahrain. We provide free inspection, sample spots, and quick transparent quotation.
             </p>
 
