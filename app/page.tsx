@@ -7,6 +7,13 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import RestorationProcess from "@/components/RestorationProcess";
 import Portfolio from "@/components/Portfolio";
+import Reviews from "@/components/Reviews";
+import Coverage from "@/components/Coverage";
+import FAQ from "@/components/FAQ";
+import ContactUs from "@/components/ContactUs";
+import FreeQuoteCTA from "@/components/FreeQuoteCTA";
+import FeatureHighlights from "@/components/FeatureHighlights";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#111111]">
@@ -19,10 +26,17 @@ export default function Home() {
 
       <FloatingActions />
        <Services />
- <WhyChooseUs />
- <BeforeAfterShowcase />
- <RestorationProcess />
- <Portfolio />
+  <WhyChooseUs />
+  <BeforeAfterShowcase />
+  <RestorationProcess />
+  <Portfolio />
+  <Reviews />
+  <Coverage />
+  <FAQ />
+  <ContactUs />
+  <FreeQuoteCTA />
+  <FeatureHighlights />
+  <Footer />
     </main>
   );
 }
