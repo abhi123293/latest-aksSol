@@ -34,13 +34,13 @@ export default function Home() {
        <Portfolio />
       <Testimonials />
       <ServiceAreas />
-  <Reviews />
-  <Coverage />
-  <FAQ />
-  <ContactUs />
-  <FreeQuoteCTA />
-  <FeatureHighlights />
-  <Footer />
+      {/* <Reviews /> */}
+      {/* <Coverage /> */}
+      <FAQ />
+      <ContactUs />
+      <FreeQuoteCTA />
+      <FeatureHighlights />
+      <Footer />
     </main>
   );
 }
