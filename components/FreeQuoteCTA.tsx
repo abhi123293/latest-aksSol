@@ -27,8 +27,8 @@ export default function FreeQuoteCTA() {
             <MessageCircle size={20} strokeWidth={2.5} aria-hidden="true" />
             WHATSAPP NOW
           </button>
-          <button className="flex h-[58px] w-[220px] shrink-0 flex-col items-center justify-center gap-1 rounded-[8px] border-2 border-[#DDAF24] bg-transparent text-white font-bold uppercase text-[13px] leading-[1.2] transition-all duration-300 hover:bg-[#DDAF24]/10 hover:text-[#DDAF24]">
-            <div className="flex items-center gap-2 text-[#DDAF24] hover:text-[#DDAF24] transition-colors duration-300">
+          <button className="flex h-[58px] w-[220px] shrink-0 flex-col items-center justify-center gap-1 rounded-[8px] border-2 border-[#DDAF24] bg-[#111111] text-white font-bold uppercase text-[13px] leading-[1.2] transition-all duration-300 hover:bg-[#DDAF24] hover:text-[#111111] hover:border-[#DDAF24]">
+            <div className="flex items-center gap-2 text-[#DDAF24] transition-colors duration-300">
               <Phone size={18} strokeWidth={2.5} aria-hidden="true" />
               CALL US NOW
             </div>
