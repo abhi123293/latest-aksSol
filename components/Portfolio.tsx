@@ -85,7 +85,7 @@ export default function Portfolio() {
       <div className="mx-auto max-w-[1200px] text-center">
 
         {/* Small Heading */}
-        <p className="text-[14px] font-bold uppercase tracking-wide text-[#5fba28]">
+        <p className="text-[12px] lg:text-[14px] font-bold uppercase tracking-wide text-[#5fba28]">
           PORTFOLIO
         </p>
 

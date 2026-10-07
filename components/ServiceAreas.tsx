@@ -61,21 +61,21 @@ export default function ServiceAreas() {
       <div className="mx-auto max-w-[1200px] text-center">
 
         {/* Small Heading */}
-       <p className="text-[14px] font-bold uppercase tracking-wide text-[#5fba28]">
+       <p className="text-[14px] font-bold uppercase tracking-wide text-[#5fba28] mt-4 translate-y-2">
           COVERAGE
         </p>
         {/* Main Heading */}
-        <h2 className="mt-3 text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-[52px]">
+        <h2 className="mt-3 text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-3xl lg:text-[48px]">
           SERVICE AREAS IN BAHRAIN
         </h2>
 
         {/* Gold Underline */}
         <div
-          className="mx-auto mt-5 h-[5px] w-[98px] rounded-full bg-[#dcb735]"/>
+          className="mx-auto mt-4 h-[5px] w-[90px] rounded-full bg-[#dcb735]"/>
 
         {/* Description */}
         <p
-          className="mx-auto mt-6 max-w-[700px] text-[14px] leading-6 text-[#91a4ba]sm:text-[16px]">
+          className="mx-auto mt-5 sm:max-w-[540px] text-[14px] sm:w-auto leading-6 text-[#91a4ba] sm:text-[16px] w-[350px]">
           We provide prompt marble and stone care services across all
           governorates of the Kingdom of Bahrain.
         </p>
@@ -100,16 +100,16 @@ export default function ServiceAreas() {
               </div>
 
               {/* Governorate Name */}
-              <h3 className="pt-[-1px] text-[18px] font-black uppercase leading-7 text-white">
+              <h3 className="pt-[-1px] text-[15px] font-black uppercase leading-7 text-white">
                 {area.title}
               </h3>
             </div>
 
             {/* Divider */}
-            <div className="my-8 h-px w-full bg-[#292929]" />
+            <div className="my-6 h-px w-full bg-[#292929]" />
 
             {/* Locations */}
-            <div className="space-y-3">
+           <div className="-translate-y-2 space-y-2 sm:translate-y-0">
               {area.locations.map((location) => (
                 <div
                   key={location}
@@ -119,7 +119,7 @@ export default function ServiceAreas() {
                   <span
                     className="h-[7px] w-[7px] shrink-0 rounded-full bg-[#dcb735]"/>
 
-                <span className="text-[14px] leading-5 text-[#91a4ba]">
+                <span className="sm:text-[13px] text-[13px] leading-5 text-[#91a4ba]">
                     {location}
                   </span>
                 </div>
@@ -130,7 +130,7 @@ export default function ServiceAreas() {
       </div>
 
       {/* ================= UTILITY CARD ================= */}
-     <div className="mx-auto mt-20 flex max-w-[1080px] flex-col gap-7 rounded-xl border border-[#292929] bg-[#191919] px-8 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+     <div className="mx-auto mt-20 flex max-w-[900px] flex-col gap-7 rounded-xl border border-[#292929] bg-[#191919] px-7 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-5">
         {/* Left Side */}
         <div className="flex items-center gap-5">
 
@@ -145,11 +145,11 @@ export default function ServiceAreas() {
 
           {/* Text */}
           <div>
-           <h3 className="text-[16px] font-black uppercase text-white sm:text-[17px]">
+           <h3 className="text-[16px] font-black uppercase text-white sm:text-[15px]">
               FULLY EQUIPPED UTILITY VEHICLES
             </h3>
 
-           <p className="mt-2 max-w-[700px] text-[13px] leading-6 text-[#91a4ba]">
+           <p className="mt-2 max-w-[700px] sm:text-[12px] text-[13px] sm:leading-5 text-[#91a4ba] leading-5 ">
               Our technicians travel with all standard machinery,
               sealers, and testing kits. We ensure zero delay on-site.
             </p>
@@ -157,10 +157,13 @@ export default function ServiceAreas() {
         </div>
 
         {/* Button */}
-     <button className="flex h-[62px] min-w-[215px] items-center justify-center rounded-md bg-[#5fba28] px-8 text-[15px] font-black uppercase leading-tight text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c]">
-          CHECK
-          <br />
-          AVAILABILITY
+     <button className="flex h-[40px] min-w-[180px] items-center justify-center rounded-md bg-[#5fba28] px-8 text-[12px] font-black uppercase leading-tight text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c] sm:h-[55px]  sm:min-w-[180px] sm:px-8 sm:text-[12px] whitespace-nowrap">
+           <span className="sm:hidden">CHECK AVAILABILITY</span>
+  <span className="hidden sm:block">
+    CHECK
+    <br />
+    AVAILABILITY
+  </span>
         </button>
       </div>
     </section>
