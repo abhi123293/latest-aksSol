@@ -9,20 +9,38 @@ import RestorationProcess from "@/components/RestorationProcess";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import ServiceAreas from "@/components/ServiceAreas";
+import Reviews from "@/components/Reviews";
+import Coverage from "@/components/Coverage";
+import FAQ from "@/components/FAQ";
+import ContactUs from "@/components/ContactUs";
+import FreeQuoteCTA from "@/components/FreeQuoteCTA";
+import FeatureHighlights from "@/components/FeatureHighlights";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#111111]">
+
       <Navbar />
+
       <Hero />
+
       <FeatureStrip />
+
       <FloatingActions />
        <Services />
-      <WhyChooseUs />
-      <BeforeAfterShowcase />
-      <RestorationProcess />
-      <Portfolio />
-      <Testimonials />
-      <ServiceAreas />
+  <WhyChooseUs />
+  <BeforeAfterShowcase />
+  <RestorationProcess />
+  <Portfolio />
+  <Testimonials />
+  <ServiceAreas />
+  <Reviews />
+  <Coverage />
+  <FAQ />
+  <ContactUs />
+  <FreeQuoteCTA />
+  <FeatureHighlights />
+  <Footer />
     </main>
   );
 }
