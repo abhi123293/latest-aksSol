@@ -28,7 +28,7 @@ const projects = [
     title: "LIMESTONE PATIO DEEP CLEAN",
     category: "STONE CLEANING",
     location: "Saar, Bahrain",
-    image: "/images/stone.jpg",
+    image: "/images/stone.webp",
   },
   {
     title: "EXECUTIVE OFFICE GRANITE HONING",
@@ -40,7 +40,7 @@ const projects = [
     title: "BEACH PENTHOUSE TRAVERTINE RESTORE",
     category: "SURFACE RESTORATION",
     location: "Amwaj Islands, Bahrain",
-    image: "/images/travertine.jpg",
+    image: "/images/weather.jpg",
   },
 ];
 

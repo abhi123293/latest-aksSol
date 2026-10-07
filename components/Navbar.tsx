@@ -20,7 +20,7 @@ export default function Navbar() {
     
       {/* Announcement Bar */}
     <div className="bg-[#111111] border-b border-[#252525]">
-  <div className="mx-auto flex h-[80px] lg:h-[40px] max-w-[1400px] items-center justify-center gap-1 px-6 text-[14px] flex-col sm:flex-row">
+  <div className="mx-auto flex h-[80px] lg:h-[40px] max-w-[1400px] items-center justify-center gap-1 px-6 text-[14px] lg:text-[12px] flex-col sm:flex-row">
 
     <div className="flex items-center gap-1">
       <span className="font-semibold text-white">
@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
 
             {/* Phone */}
-            <div className="flex items-center gap-2 font-semibold text-[#dcb735] text-[11px]">
+            <div className="flex items-center gap-2 font-semibold text-[#dcb735] text-[12px]">
               <Phone size={18} />
               <span>+973 3366 1188</span>
             </div>

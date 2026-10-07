@@ -144,7 +144,7 @@ export default function Services() {
           OUR SERVICES
         </p>
 
-        <h2 className="mt-3 text-3xl font-black uppercase leading-tight tracking-tight text-[#111111] sm:text-4xl lg:text-5xl xl:text-[54px]">
+        <h2 className="mt-3 text-3xl font-black uppercase leading-tight tracking-tight text-[#111111] sm:text-4xl lg:text-5xl xl:text-[48px]">
           PREMIUM STONE CARE & RESTORATION
         </h2>
 

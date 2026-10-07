@@ -80,7 +80,7 @@ export default function Hero() {
        <div className="relative hidden min-h-[450px] lg:block lg:min-h-0">
 
           <img
-            src="/images/hero.jpg"
+            src="/images/granite.webp"
             alt="Luxury marble and stone property"
             className="absolute inset-0 h-full w-full object-cover"
           />
