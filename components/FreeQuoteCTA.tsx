@@ -1,8 +1,23 @@
 "use client";
 
 import { ClipboardList, MessageCircle, Phone } from "lucide-react";
+import { useState } from "react";
 
 export default function FreeQuoteCTA() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const callBtnStyles = isHovered
+    ? "bg-[#DDAF24] text-[#111111] border-[#DDAF24]"
+    : "bg-[#111111] text-white border-[#DDAF24]";
+
+  const iconTextStyles = isHovered
+    ? "text-[#111111]"
+    : "text-white";
+
+  const phoneTextStyles = isHovered
+    ? "text-[#111111]"
+    : "text-white";
+
   return (
     <section className="bg-[#111111] border border-[#DDAF24] rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.25)] mx-auto max-w-[1200px] px-[40px] py-[35px] relative overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -27,46 +42,23 @@ export default function FreeQuoteCTA() {
             <MessageCircle size={20} strokeWidth={2.5} aria-hidden="true" />
             WHATSAPP NOW
           </button>
-          <button className="call-btn flex h-[58px] w-[220px] shrink-0 flex-col items-center justify-center gap-1 rounded-[8px] border-2 border-[#DDAF24] bg-[#111111] text-white font-bold uppercase text-[13px] leading-[1.2] transition-all duration-300">
-            <div className="call-btn__icon-text flex items-center gap-2 text-white transition-colors duration-300">
+          <button
+            className={`call-btn flex h-[58px] w-[220px] shrink-0 flex-col items-center justify-center gap-1 rounded-[8px] border-2 ${callBtnStyles} font-bold uppercase text-[13px] leading-[1.2] transition-all duration-300`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onFocus={() => setIsHovered(true)}
+            onBlur={() => setIsHovered(false)}
+          >
+            <div className={`call-btn__icon-text flex items-center gap-2 transition-colors duration-300 ${iconTextStyles}`}>
               <Phone size={18} strokeWidth={2.5} aria-hidden="true" />
               CALL US NOW
             </div>
-            <span className="call-btn__phone font-normal text-[13px] leading-[1.2] uppercase text-white">
+            <span className={`call-btn__phone font-normal text-[13px] leading-[1.2] uppercase ${phoneTextStyles}`}>
               +973 3366 1188
             </span>
           </button>
         </div>
       </div>
-      <style jsx>{`
-        .call-btn {
-          background-color: #111111;
-          border-color: #DDAF24;
-          color: white;
-        }
-        .call-btn:hover,
-        .call-btn:focus,
-        .call-btn:active {
-          background-color: #DDAF24;
-          border-color: #DDAF24;
-          color: #111111;
-        }
-        .call-btn:hover .call-btn__icon-text,
-        .call-btn:focus .call-btn__icon-text,
-        .call-btn:active .call-btn__icon-text {
-          color: #111111;
-        }
-        .call-btn:hover .call-btn__phone,
-        .call-btn:focus .call-btn__phone,
-        .call-btn:active .call-btn__phone {
-          color: #111111;
-        }
-        .call-btn:focus-visible {
-          outline: 2px solid #DDAF24;
-          outline-offset: 2px;
-        }
-      `}
-      </style>
     </section>
   );
 }

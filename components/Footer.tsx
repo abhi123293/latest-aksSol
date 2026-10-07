@@ -9,7 +9,7 @@ export default function Footer() {
         </p>
         <p className="text-[#667085] font-normal text-[12px] leading-[1.5] text-center sm:text-right flex items-center justify-center sm:justify-end gap-1">
           Designed with
-          <span className="text-[#E53E3E" aria-hidden="true">♥</span>
+          <span className="text-[#FF0000]" aria-hidden="true">♥</span>
           for Excellence
         </p>
       </div>
