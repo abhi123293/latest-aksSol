@@ -32,9 +32,9 @@ export default function Navbar() {
       </span>
     </div>
 
-    <button className="ml-0 sm:ml-2 rounded-md bg-[#5fba28] px-5 py-1 mt-1 text-[10px] font-bold text-white transition hover:bg-[#70cc35] ">
+    <a  href="/brand-guide" className="ml-0 sm:ml-2 rounded-md bg-[#5fba28] px-5 py-1 mt-1 text-[10px] font-bold text-white transition hover:bg-[#70cc35] ">
       SWITCH TO BRAND GUIDELINES
-    </button>
+    </a>
 
   </div>
 </div>
@@ -143,9 +143,12 @@ export default function Navbar() {
             </a>
 
             {/* Brand Guide */}
-            <button className="rounded-md border border-[#dcb735] px-5 py-3 font-bold text-[#dcb735] transition hover:bg-[#dcb735] hover:text-white">
-              BRAND GUIDE
-            </button>
+           <a
+  href="/brand-guide"
+  className="rounded-md border border-[#dcb735] px-5 py-3 font-bold text-[#dcb735] transition hover:bg-[#dcb735] hover:text-white"
+>
+  BRAND GUIDE
+</a>
 
             {/* Quote */}
             <button className="rounded-md bg-[#5fba28] px-7 py-3 font-bold text-white transition hover:bg-[#4da51c]">

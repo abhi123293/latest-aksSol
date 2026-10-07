@@ -210,7 +210,12 @@ className="group flex h-[450px] flex-col rounded-xl border border-[#1f2937] bg-w
 </div>
 
               {/* Inquire button */}
-              <button className="mt-auto flex h-[40px] w-full items-center justify-center rounded-md border border-[#dfe3e8] bg-white text-sm font-bold uppercase text-[#111111] transition duration-300 hover:border-[#5fba28] hover:bg-[#5fba28] hover:text-white">
+              <button 
+              onClick={() => {
+  document.getElementById("contact")?.scrollIntoView({
+    behavior: "smooth",
+  });
+}} className="mt-auto flex h-[40px] w-full items-center justify-center rounded-md border border-[#dfe3e8] bg-white text-sm font-bold uppercase text-[#111111] transition duration-300 hover:border-[#5fba28] hover:bg-[#5fba28] hover:text-white">
                 INQUIRE SERVICE
               </button>
             </div>
@@ -220,7 +225,11 @@ className="group flex h-[450px] flex-col rounded-xl border border-[#1f2937] bg-w
 
       {/* Custom Service Button */}
       <div className="mt-20 flex justify-center">
-        <button className="flex h-[55px] items-center justify-center gap-4 rounded-md bg-[#5fba28] px-10 text-sm font-bold uppercase text-white shadow-lg transition duration-300 hover:bg-[#4da51c]">
+        <button onClick={() => {
+  document.getElementById("contact")?.scrollIntoView({
+    behavior: "smooth",
+  });
+}} className="flex h-[55px] items-center justify-center gap-4 rounded-md bg-[#5fba28] px-10 text-sm font-bold uppercase text-white shadow-lg transition duration-300 hover:bg-[#4da51c]">
           REQUEST A CUSTOM SERVICE
           <ArrowRight size={20} strokeWidth={2} />
         </button>

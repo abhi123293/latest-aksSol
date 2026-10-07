@@ -156,7 +156,11 @@ export default function ServiceAreas() {
         </div>
 
         {/* Button */}
-     <button className="flex h-[48px] w-full items-center justify-center rounded-md bg-[#5fba28] px-5 text-[11px] font-black uppercase leading-tight whitespace-nowrap text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c] lg:h-[55px] lg:w-auto lg:min-w-[180px] lg:px-8 lg:text-[12px]">
+     <button onClick={() => {
+  document.getElementById("contact")?.scrollIntoView({
+    behavior: "smooth",
+  });
+}} className="flex h-[48px] w-full items-center justify-center rounded-md bg-[#5fba28] px-5 text-[11px] font-black uppercase leading-tight whitespace-nowrap text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c] lg:h-[55px] lg:w-auto lg:min-w-[180px] lg:px-8 lg:text-[12px]">
            <span className="lg:hidden">CHECK AVAILABILITY</span>
   <span className="hidden lg:block">
     CHECK

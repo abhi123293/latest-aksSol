@@ -38,19 +38,10 @@ export default function UtilityVehicleBanner() {
       </div>
 
       {/* CTA Button */}
-      <a
-        href="#contact-heading"
-        className="
-          flex h-[52px] w-full shrink-0
-          items-center justify-center
-          rounded-[5px]
-          bg-[#55B52A]
-          px-6
-          text-center text-[13px] font-bold leading-[1.2] text-white
-          transition-colors hover:bg-[#4a9e24]
-          sm:h-[56px] sm:w-[192px]
-        "
-      >
+     <a
+  href="#contact-heading"
+  className="flex h-[52px] w-full shrink-0 items-center justify-center rounded-[5px] bg-[#55B52A] px-6 text-center text-[13px] font-bold leading-[1.2] text-white transition-colors hover:bg-[#4a9e24] sm:h-[56px] sm:w-[192px]"
+>
         CHECK
         <br />
         AVAILABILITY

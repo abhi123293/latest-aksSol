@@ -143,7 +143,11 @@ export default function BeforeAfterShowcase() {
 
       {/* GALLERY BUTTON */}
       <div className="mt-20 flex justify-center">
-      <button className="flex h-[45px] items-center justify-center gap-4 rounded-md bg-[#5fba28] px-5 text-sm font-bold uppercase text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c]">
+      <button onClick={() => {
+  document.getElementById("contact")?.scrollIntoView({
+    behavior: "smooth",
+  });
+}} className="flex h-[45px] items-center justify-center gap-4 rounded-md bg-[#5fba28] px-5 text-sm font-bold uppercase text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#4da51c]">
           VIEW MORE TRANSFORMATION GALLERY
 
           <ArrowRight

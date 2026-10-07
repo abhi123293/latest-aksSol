@@ -121,8 +121,7 @@ export default function ContactUs() {
   }, []);
 
   return (
-    <section
-    id="contact"
+    <section id="contact"
       ref={sectionRef}
       className="bg-white px-5 pt-[100px] pb-[100px] sm:px-8 lg:px-12 xl:px-20"
       aria-labelledby="contact-heading"

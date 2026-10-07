@@ -5,6 +5,13 @@ import { ChevronDown } from "lucide-react";
 
 export default function QuoteForm() {
   const [service, setService] = useState("Marble Polishing");
+    const [errors, setErrors] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
 
   const services = [
     "Marble Polishing",
@@ -15,8 +22,64 @@ export default function QuoteForm() {
     "Restoration",
   ];
 
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value.trim();
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
+
+    const newErrors = {
+      name: "",
+      phone: "",
+      email: "",
+      service: "",
+      message: "",
+    };
+
+    if (!name) {
+      newErrors.name = "Please enter your name.";
+    } else if (name.length < 2) {
+      newErrors.name = "Name must be at least 2 characters.";
+    }
+
+    if (!phone) {
+      newErrors.phone = "Please enter your phone number.";
+    } else if (!/^[+]?973[\s-]?[0-9]{8}$/.test(phone.replace(/\s/g, ""))) {
+      newErrors.phone = "Please enter a valid phone number.";
+    }
+
+    if (!email) {
+      newErrors.email = "Please enter your email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    if (!service) {
+      newErrors.service = "Please select a service.";
+    }
+
+    if (!message) {
+      newErrors.message = "Please enter your message.";
+    } else if (message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.values(newErrors).some((error) => error !== "")) {
+      return;
+    }
+
+    alert("Quote request submitted successfully!");
+  };
+
   return (
-    <form className="bg-[#f8f9fa] border border-[#46515F] rounded-[17px] p-[42px] w-full max-w-[665px] shadow-[0_4px_20px_rgba(0,0,0,0.04)]" noValidate>
+    <form onSubmit={handleSubmit} className="bg-[#f8f9fa] border border-[#46515F] rounded-[17px] p-[42px] w-full max-w-[665px] shadow-[0_4px_20px_rgba(0,0,0,0.04)]" noValidate>
       {/* Form Header */}
       <div className="mb-[30px]">
         <h3 className="text-[#14243A] font-bold uppercase text-[22px] leading-[1.2]">
@@ -35,10 +98,16 @@ export default function QuoteForm() {
           </label>
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
             required
             className="text-[#14243A] w-full h-[50px] bg-white border border-[#E1E5EA] rounded-[9px] px-[18px] text-[15px] leading-[1.2] placeholder-[#B0B8C1] focus:outline-none focus:border-[#55B52A] focus:ring-1 focus:ring-[#55B52A] transition-colors"
           />
+          {errors.name && (
+  <p className="mt-1 text-xs text-red-500">
+    {errors.name}
+  </p>
+)}
         </div>
         <div className="flex-1">
           <label className="block text-[#5B718A] font-bold uppercase text-[12px] leading-[1.2] tracking-[0.5px] mb-[8px]">
@@ -46,10 +115,16 @@ export default function QuoteForm() {
           </label>
           <input
   type="tel"
+  name="phone"
   placeholder="Phone Number"
   required
   className="w-full h-[50px] bg-white border border-[#E1E5EA] rounded-[9px] px-[18px] text-[15px] text-[#14243A] leading-[1.2] placeholder-[#B0B8C1] focus:outline-none focus:border-[#55B52A] focus:ring-1 focus:ring-[#55B52A] transition-colors"
 />
+{errors.phone && (
+  <p className="mt-1 text-xs text-red-500">
+    {errors.phone}
+  </p>
+)}
         </div>
       </div>
 
@@ -60,10 +135,16 @@ export default function QuoteForm() {
         </label>
         <input
           type="email"
+          name="email"
           placeholder="Email Address"
           required
           className="w-full h-[50px] bg-white border border-[#E1E5EA] rounded-[9px] px-[18px] text-[15px] text-[#14243A] leading-[1.2] placeholder-[#B0B8C1] focus:outline-none focus:border-[#55B52A] focus:ring-1 focus:ring-[#55B52A] transition-colors"
         />
+        {errors.email && (
+  <p className="mt-1 text-xs text-red-500">
+    {errors.email}
+  </p>
+)}
       </div>
 
       {/* Service Required */}
@@ -78,6 +159,11 @@ export default function QuoteForm() {
             required
             className="w-full h-[50px] bg-white border border-[#E1E5EA] rounded-[9px] px-[18px] pr-[48px] text-[15px] text-[#14243A] leading-[1.2] appearance-none cursor-pointer focus:outline-none focus:border-[#55B52A] focus:ring-1 focus:ring-[#55B52A] transition-colors"
           >
+            {errors.service && (
+  <p className="mt-1 text-xs text-red-500">
+    {errors.service}
+  </p>
+)}
             {services.map((s) => (
               <option key={s} value={s}>
                 {s}
@@ -96,10 +182,16 @@ export default function QuoteForm() {
           MESSAGE DETAILS
         </label>
         <textarea
+          name="message"
           placeholder="Tell us about your stone type, approximate floor size, and specific problems..."
           required
           className="w-full h-[112px] bg-white border border-[#E1E5EA] rounded-[9px] p-[17px] text-[15px] text-[#14243A] leading-[1.5] placeholder-[#B0B8C1] focus:outline-none focus:border-[#55B52A] focus:ring-1 focus:ring-[#55B52A] transition-colors resize-y min-h-[112px]"
         />
+        {errors.message && (
+  <p className="mt-1 text-xs text-red-500">
+    {errors.message}
+  </p>
+)}
       </div>
 
       {/* Submit Button */}

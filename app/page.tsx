@@ -9,8 +9,7 @@ import RestorationProcess from "@/components/RestorationProcess";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import ServiceAreas from "@/components/ServiceAreas";
-import Reviews from "@/components/Reviews";
-import Coverage from "@/components/Coverage";
+
 import FAQ from "@/components/FAQ";
 import ContactUs from "@/components/ContactUs";
 import FreeQuoteCTA from "@/components/FreeQuoteCTA";
