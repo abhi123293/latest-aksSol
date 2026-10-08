@@ -28,7 +28,7 @@ export default function Hero() {
   return (
    <section className="relative overflow-hidden bg-[#111111] font-[var(--font-montserrat)]">
 
-      <div className="grid min-h-[725px] grid-cols-1 lg:grid-cols-[60%_40%] ">
+      <div className="grid min-h-[755px] grid-cols-1 lg:grid-cols-[60%_40%] ">
 
         {/* LEFT SIDE */}
         <div className="flex min-h-[440px] items-center bg-[#111111] lg:min-h-[600px]">

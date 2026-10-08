@@ -61,9 +61,8 @@ export default function FeatureStrip() {
   return (
     <>
       {/* Feature Strip */}
-      <section className="relative z-10 mt-0 w-full lg:-mt-[90px]">
-        <div
-          className="grid w-full grid-cols-2 border-y border-white/10 bg-black/45 backdrop-blur-md px-3 lg:grid-cols-4 lg:px-24">
+      <section className="relative z-10 -mb-[15px] w-full lg:-mt-[90px]">
+        <div className="grid w-full grid-cols-2 border-t border-white/10 bg-[#111111] px-3 lg:grid-cols-4 lg:bg-black/45 lg:backdrop-blur-md lg:px-24">
           {features.map((feature) => {
             const Icon = feature.icon;
 
@@ -95,7 +94,7 @@ export default function FeatureStrip() {
 
       {/* Statistics Section */}
    {/* Statistics Section */}
-<section className="bg-[#1c1c1c] px-5 py-10 lg:px-20">
+<section className="relative z-0 -mt-0 bg-[#1c1c1c] px-5 py-18 lg:px-20">
   <div
     ref={statsRef}
     className="mx-auto grid max-w-[1400px] grid-cols-2 gap-6 lg:flex lg:justify-center lg:gap-10"
