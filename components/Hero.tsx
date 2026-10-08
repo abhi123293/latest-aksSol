@@ -28,7 +28,7 @@ export default function Hero() {
   return (
    <section className="relative overflow-hidden bg-[#111111] font-[var(--font-montserrat)]">
 
-      <div className="grid min-h-[625px] grid-cols-1 lg:grid-cols-[60%_40%] mt-14">
+      <div className="grid min-h-[725px] grid-cols-1 lg:grid-cols-[60%_40%] ">
 
         {/* LEFT SIDE */}
         <div className="flex min-h-[440px] items-center bg-[#111111] lg:min-h-[600px]">
@@ -46,7 +46,7 @@ export default function Hero() {
             </h1>
 
             {/* White Heading */}
-           <h2 className="mt-4 max-w-[680px] text-4xl font-black uppercase leading-[1.02] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[50px] max-sm:font-[var(--font-montserrat)]">
+           <h2 className="mt-4 max-w-[680px] text-4xl font-black uppercase leading-[1.02] tracking-tight text-white sm:text-3xl lg:text-4xl xl:text-[45px] max-sm:font-[var(--font-montserrat)]">
               OF YOUR MARBLE &
               <br />
               STONE SURFACES
