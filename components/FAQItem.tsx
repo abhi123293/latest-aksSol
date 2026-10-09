@@ -10,7 +10,7 @@ interface FAQItemProps {
 }
 
 export default function FAQItem({ question, answer, isLast }: FAQItemProps) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="border-b border-[#E8EAED] last:border-b-0">
