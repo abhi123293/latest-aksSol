@@ -1,128 +1,168 @@
+
 "use client";
+
+import {
+  CalendarCheck,
+  Settings,
+  Users,
+  Gem,
+  ShieldCheck,
+  Wallet,
+  Clock,
+  Building2,
+} from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const processes = [
+const reasons = [
   {
-    number: "01",
-    title: "INSPECTION",
+    icon: CalendarCheck,
+    title: "3+ YEARS OF EXPERIENCE",
     description:
-      "Free on-site assessment of stone type, scratch depth, and initial gloss reading.",
+      "Delivering high-quality marble and stone restoration solutions.",
   },
   {
-    number: "02",
-    title: "PROTECTION",
+    icon: Settings,
+    title: "ADVANCED TECHNOLOGY & EQUIPMENT",
     description:
-      "Masking all wall skirtings, door frames, and surrounding areas to ensure zero mess.",
+      "Using advanced technology and professional equipment for stone care.",
   },
   {
-    number: "03",
-    title: "GRINDING",
+    icon: Users,
+    title: "SKILLED & EXPERIENCED TEAM",
     description:
-      "Lippage removal and leveling of uneven joints using planetary grinding machines.",
+      "Experienced professionals dedicated to quality workmanship.",
   },
   {
-    number: "04",
-    title: "HONING",
+    icon: Gem,
+    title: "PREMIUM QUALITY MATERIALS",
     description:
-      "Progressive diamond abrasive honing to remove scratches and prepare for polish.",
+      "Quality materials selected for professional stone restoration.",
   },
   {
-    number: "05",
-    title: "CRYSTALLIZATION",
+    icon: ShieldCheck,
+    title: "LONG-LASTING SURFACE PROTECTION",
     description:
-      "Chemical treatment to create a durable, liquid-resistant, and high-gloss protective shield.",
+      "Protective treatments that help preserve stone surfaces.",
   },
   {
-    number: "06",
-    title: "HANDOVER",
+    icon: Wallet,
+    title: "AFFORDABLE PRICING",
     description:
-      "Final gloss verification with the client and delivering post-service care guide.",
+      "Quality stone care solutions at competitive prices.",
+  },
+  {
+    icon: Clock,
+    title: "RELIABLE & ON-TIME SERVICE",
+    description:
+      "Dependable service with a focus on timely completion.",
+  },
+  {
+    icon: Building2,
+    title: "RESIDENTIAL & COMMERCIAL SOLUTIONS",
+    description:
+      "Stone restoration solutions for homes and commercial properties.",
   },
 ];
 
 export default function RestorationProcess() {
-    const cardsRef = useRef<HTMLDivElement[]>([]);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
 
-    useEffect(() => {
-  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  const cards = cardsRef.current;
+    const ctx = gsap.context(() => {
+      const cards = cardsRef.current.filter(
+        (card): card is HTMLDivElement => card !== null
+      );
 
-  gsap.fromTo(
-    cards,
-    {
-      y: 30,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.2,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: cards[0],
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    }
-  );
+      if (!cards.length) return;
 
-  return () => {
-    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  };
-}, []);
+      gsap.fromTo(
+        cards,
+        {
+          y: 30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cards[0],
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        }
+      );
+    });
+
+    return () => {
+      ctx.revert();
+    };
+  }, []);
 
   return (
-  <section className="bg-[#f8f8f8] px-5 py-10 sm:py-20 font-[var(--font-montserrat)] sm:px-8 lg:px-12 xl:px-20">
-      {/* Heading */}
-     <div className="mx-auto max-w-[1400px] translate-y-6 text-center sm:translate-y-0">
+    <section
+      id="why-choose-us"
+      className="bg-[#f8f8f8] px-5 py-16 font-[var(--font-montserrat)] sm:px-8 sm:py-20 lg:px-12 xl:px-20"
+    >
+      {/* Section Heading */}
+      <div className="mx-auto max-w-[1400px] text-center">
         <p className="text-[14px] font-bold uppercase tracking-wide text-[#5fba28]">
-          WORKFLOW
+          WHY AKS SOLUTIONS
         </p>
 
-  <h2 className="mx-auto mt-3 w-[320px] text-[30px] font-black uppercase leading-tight tracking-tight text-[#111111] sm:w-auto sm:text-3xl lg:text-[48px]">
-  OUR RESTORATION PROCESS
-</h2>
+        <h2 className="mx-auto mt-3 text-[30px] font-black uppercase leading-tight tracking-tight text-[#111111] sm:text-3xl lg:text-[48px]">
+          WHY CHOOSE AKS SOLUTIONS?
+        </h2>
 
-        {/* Gold underline */}
         <div className="mx-auto mt-5 h-[5px] w-[98px] rounded-full bg-[#dcb735]" />
       </div>
 
-      {/* Process */}
-      <div className="relative mx-auto mt-20 max-w-[1320px]">
+      {/* Reasons Grid */}
+      <div className="mx-auto mt-12 grid max-w-[1250px] grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-7">
+        {reasons.map((reason, index) => {
+          const Icon = reason.icon;
 
-        {/* Connecting Line */}
-      <div className="absolute left-0 right-0 top-1/2 hidden h-[2px] bg-[#e2e5e8] lg:block" />
-
-        {/* Cards */}
-        <div
-          className=" relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
-          {processes.map((process,index ) => (
-           <div key={process.number}   ref={(el) => {
-    if (el) cardsRef.current[index] = el;
-  }} className="group relative z-10 h-[220px] rounded-xl border border-[#1f2937] bg-white px-6 py-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:h-[280px]">
-              {/* Number */}
-              <div className="mx-auto flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#5fba28] text-[22px] font-black text-white shadow-md transition-transform duration-300 group-hover:scale-110">
-                {process.number}
+          return (
+            <div
+              key={reason.title}
+              ref={(el) => {
+                if (el) {
+                  cardsRef.current[index] = el;
+                }
+              }}
+              className="group flex min-h-[245px] flex-col items-center rounded-xl border border-[#e4e8df] bg-white px-5 py-7 text-center shadow-[0_1px_2px_rgba(17,17,17,0.04),0_14px_34px_-14px_rgba(17,17,17,0.10)] transition-shadow duration-300 hover:shadow-[0_20px_40px_-18px_rgba(95,186,40,0.30)]"
+            >
+              {/* Icon */}
+              <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-xl bg-[#eef7e9] transition-colors duration-300 group-hover:bg-[#5fba28]">
+                <Icon
+                  size={30}
+                  strokeWidth={1.8}
+                  className="text-[#5fba28] transition-colors duration-300 group-hover:text-white"
+                />
               </div>
 
+              {/* Gold Accent */}
+              <div className="mt-5 h-[3px] w-10 rounded-full bg-[#dcb735]" />
+
               {/* Title */}
-              <h3
-                className=" mt-8 text-[15px] font-black uppercase leading-tight text-[#111111]">
-                {process.title}
+              <h3 className="mt-4 text-[15px] font-black uppercase leading-snug text-[#111111]">
+                {reason.title}
               </h3>
 
               {/* Description */}
-              <p
-                className="mt-5 text-[14px] leading-6 text-[#64748b]">
-                {process.description}
+              <p className="mt-3 text-[13px] leading-6 text-[#64748b]">
+                {reason.description}
               </p>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );

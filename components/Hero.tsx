@@ -53,8 +53,27 @@ export default function Hero() {
             </h2>
 
             {/* Description */}
-           <p className="mt-6 max-w-[620px] text-base leading-7 text-[#e2e2e2] sm:text-lg lg:text-xl max-sm:text-[22px] max-sm:leading-7 max-sm:mt-7 max-sm:mb-6 max-sm:font-[var(--font-montserrat)]"> Professional Marble Polishing, Stone Restoration & Cleaning Services Across Bahrain.
+           <p className="mt-6 max-w-[620px] text-base leading-7 text-[#e2e2e2] sm:text-lg lg:text-xl max-sm:text-[22px] max-sm:leading-7 max-sm:mt-7 max-sm:mb-6 max-sm:font-[var(--font-montserrat)]"> Professional Marble Polishing,  Granite Restoration, Stone Restoration, Cleaning, and Sealing Services across Bahrain.
                </p>
+
+               {/* Experience Highlight */}
+{/* Experience Highlight */}
+<div className="mt-7 flex items-center gap-4 border-l-[3px] border-[#dcb735] pl-4">
+  <div>
+    <p className="text-[30px] font-black leading-none text-[#dcb735]">
+      3+
+    </p>
+    <p className="mt-1 text-[12px] font-bold uppercase tracking-wide text-white">
+      YEARS OF EXPERIENCE
+    </p>
+  </div>
+
+  <div className="h-[42px] w-px bg-white/20" />
+
+  <p className="max-w-[300px] text-[15px] font-medium leading-6 text-[#cfcfcf]">
+    Delivering high-quality marble and stone restoration solutions.
+  </p>
+</div>
             {/* Buttons */}
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
 
