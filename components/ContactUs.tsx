@@ -167,12 +167,12 @@ export default function ContactUs() {
               <ContactInfoCard
                 icon={<Phone size={22} strokeWidth={2} />}
                 label="CALL US 24/7"
-                value="+973 3366 1188"
+                value="+973 6667 8078"
               />
               <ContactInfoCard
                 icon={<Mail size={22} strokeWidth={2} />}
                 label="EMAIL ADDRESS"
-                value="info@akssolutionsbh.com"
+                value="info@akssolution.co"
               />
               <ContactInfoCard
                 icon={<MapPin size={22} strokeWidth={2} />}
