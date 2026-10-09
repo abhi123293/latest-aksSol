@@ -161,9 +161,12 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
     
 <div className="flex items-center gap-3 lg:hidden">
-  <button className="rounded-md border border-[#dcb735] px-3 py-2 text-[9px] font-bold text-[#dcb735]">
-    BRAND GUIDE
-  </button>
+  <a
+  href="/brand-guide"
+  className="rounded-md border border-[#dcb735] px-3 py-2 text-[9px] font-bold text-[#dcb735] transition hover:bg-[#dcb735] hover:text-white"
+>
+  BRAND GUIDE
+</a>
 
   <button
     onClick={() => setIsMenuOpen(!isMenuOpen)}
