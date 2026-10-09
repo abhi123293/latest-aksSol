@@ -38,25 +38,32 @@ export default function FreeQuoteCTA() {
 
         {/* Right - Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto shrink-0">
-          <button className="flex h-[58px] w-[230px] shrink-0 items-center justify-center gap-3 rounded-[8px] bg-[#55B52A] text-white font-bold uppercase text-[13px] leading-[1.2] shadow-[0_4px_15px_rgba(85,181,42,0.3)] transition-all duration-300 hover:bg-[#4A9E24] hover:shadow-[0_6px_20px_rgba(85,181,42,0.4)] hover:-translate-y-[1px]">
-            <MessageCircle size={20} strokeWidth={2.5} aria-hidden="true" />
-            WHATSAPP NOW
-          </button>
-          <button
-            className={`call-btn flex h-[58px] w-[220px] shrink-0 flex-col items-center justify-center gap-1 rounded-[8px] border-2 ${callBtnStyles} font-bold uppercase text-[13px] leading-[1.2] transition-all duration-300`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onFocus={() => setIsHovered(true)}
-            onBlur={() => setIsHovered(false)}
-          >
-            <div className={`call-btn__icon-text flex items-center gap-2 transition-colors duration-300 ${iconTextStyles}`}>
-              <Phone size={18} strokeWidth={2.5} aria-hidden="true" />
-              CALL US NOW
-            </div>
-            <span className={`call-btn__phone font-normal text-[13px] leading-[1.2] uppercase ${phoneTextStyles}`}>
-              +973 3366 1188
-            </span>
-          </button>
+        <a
+  href="https://wa.me/97333661188"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex h-[58px] w-[230px] shrink-0 items-center justify-center gap-3 rounded-[8px] bg-[#55B52A] text-white font-bold uppercase text-[13px] leading-[1.2] shadow-[0_4px_15px_rgba(85,181,42,0.3)] transition-all duration-300 hover:bg-[#4A9E24] hover:shadow-[0_6px_20px_rgba(85,181,42,0.4)] hover:-translate-y-[1px]"
+>
+  <MessageCircle size={20} strokeWidth={2.5} aria-hidden="true" />
+  WHATSAPP NOW
+</a>
+         <a
+  href="tel:+97366678078"
+  className={`call-btn flex h-[58px] w-[220px] shrink-0 flex-col items-center justify-center gap-1 rounded-[8px] border-2 ${callBtnStyles} font-bold uppercase text-[13px] leading-[1.2] transition-all duration-300`}
+  onMouseEnter={() => setIsHovered(true)}
+  onMouseLeave={() => setIsHovered(false)}
+  onFocus={() => setIsHovered(true)}
+  onBlur={() => setIsHovered(false)}
+>
+  <div className={`call-btn__icon-text flex items-center gap-2 transition-colors duration-300 ${iconTextStyles}`}>
+    <Phone size={18} strokeWidth={2.5} aria-hidden="true" />
+    CALL US NOW
+  </div>
+
+  <span className={`call-btn__phone font-normal text-[13px] leading-[1.2] uppercase ${phoneTextStyles}`}>
+    +973 6667 8078
+  </span>
+</a>
         </div>
       </div>
     </section>
