@@ -78,16 +78,16 @@ export default function Hero() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
 
               {/* Quote */}
-              <button className="flex h-[60px] items-center justify-center gap-3 rounded-md bg-[#5fba28] px-7 text-base font-bold text-white transition duration-300 hover:scale-[1.02] hover:bg-[#6bcf2d]">
+              <a href="#contact" className="flex h-[60px] items-center justify-center gap-3 rounded-md bg-[#5fba28] px-7 text-base font-bold text-white transition duration-300 hover:scale-[1.02] hover:bg-[#6bcf2d]">
                 <MessageCircle size={24} strokeWidth={2} />
                 GET FREE QUOTE
-              </button>
+              </a>
 
               {/* WhatsApp */}
-              <button className="flex h-[60px] items-center justify-center gap-3 rounded-md border border-[#dcb735] bg-transparent px-7 text-base font-bold text-white transition duration-300 hover:bg-[#dcb735] hover:text-black">
+              <a href="https://wa.me/97333661188" className="flex h-[60px] items-center justify-center gap-3 rounded-md border border-[#dcb735] bg-transparent px-7 text-base font-bold text-white transition duration-300 hover:bg-[#dcb735] hover:text-black">
                 <MessageCircle size={24} strokeWidth={2} />
                 WHATSAPP NOW
-              </button>
+              </a>
 
             </div>
 
